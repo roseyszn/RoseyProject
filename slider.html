@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+            .slider{
+                position: relative;
+                overflow: hidden;
+                width: 80%;
+                margin: auto;
+                
+            }
+            .slides{
+                display: flex;
+                width: 80%;
+                margin: auto;
+                
+            } 
+
+            .slides fieldset{
+                display: none;
+                width: 45%;
+            }
+
+            fieldset.displaySlide{
+                display: block;     
+                height: 500px;
+                margin: 20px;
+                text-align: center;
+                border: none;
+                box-shadow: rgba(0, 0, 0, 0.129) 0px 5px 10px;
+            }
+
+            fieldset p{
+                font-weight: 100;
+            }
+            button{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                border: none;
+                cursor: pointer;
+                padding: 10px , 15px;
+            }
+
+            .prev{
+                left: 0;
+            }
+            .next{
+                right: 0;
+            }
+
+            @media (max-width:500px) {
+                fieldset.displaySlide{
+                    width: 80%;
+                }
+
+                .slider{
+                    width: 90%;
+                }
+                
+            }
+
+            @media (max-width:760px) {
+               .slides {
+                    width: 100%;
+                }
+
+                
+                
+                
+            }
+</style>
+</head>
+<body>
+    <div class="slider">
+
+        <div class="slides">
+
+            <button class='prev' onclick="prevSlide()">&#10094</button>
+            <fieldset class="slid">
+                <legend style="margin: auto;">
+                    <div style="border: 2px solid red; border-radius: 50%; height: 100px; width: 100px; " >
+                    <img src="Real/Images/steve-hargadon.png" alt="" style="width: inherit;">
+                </div></legend>
+                <h5 style="text-align: center;">Steve Hargadon</h5>
+                <h6 style="text-align: center;">Founder and Director, The Learning Revolution Project</h6>
+                <p>
+                <i style="text-align: center;">I'm Seriously impressed by the WizIQ Virtual Classroom environment. 
+                I've run dozens of online eevnts with thousands of session rooms using a different provider, and when I saw the re-engineered WizIQ environment I wanted to shout "hurrah!" Finally someone has gotten everything right- a very modern, attractive layout, AND all of the functionality intact. Kudo to the team at WizIQ
+            </i></p>
+            </fieldset>
+            
+            <fieldset  class="slid">
+                <legend style="margin: auto;">
+                    <div style="border: 2px solid red; border-radius: 50%; height: 100px; width: 100px; " >
+                    <img src="Real/Images/aakash-chaudhary.png" alt="" style="width: inherit;">
+                </div></legend>
+                <h5 style="text-align: center;">Aakash Chaudhary</h5>
+                <h6 style="text-align: center;">Director, Aakash Educational Services, India's leading Test
+                    Prep and Tutoring insitute</h6>
+                <i style="text-align: center;">
+                    The Aakash Live launch (using WizIQ) marks an important
+                    milestone in our ongoing efforts to provide expertfaculty to
+                    students anywhere in the country. The live online sessions
+                    completely mirror the energy you find in an Aakash
+                    classroom, and our students can choose to use any device—
+                    desktop, laptop, tab, or mobile—for seamless learning
+                    experience.
+            </i>
+            </fieldset>
+            <fieldset  class="slid">
+                <legend style="margin: auto;">
+                    <div style="border: 2px solid red; border-radius: 50%; height: 100px; width: 100px; " >
+                    <img src="Real/Images/justine-vlok-.png" alt="" style="width: inherit;">
+                </div></legend>
+                <h5 style="text-align: center;">Justine Vlok</h5>
+                <h6 style="text-align: center;">Experience Director, E3 English</h6>
+                <i style="text-align: center;">
+                    One of the most important aspects for selecting Wiz1Q was
+                    user experience for our teachers and students here at E3
+                    English, not only has WizIQ provided easy and effective user
+                    experience they have helped us connect our community in
+                    our live sessions seamlessly. From the API to the WizIQ LMS
+                    and classroom management, we have nothing but good
+                    feedback. WizIQ's excellent business management and team
+                    work has made creating live classrooms.</i>
+            </fieldset>
+            <fieldset  class="slid">
+                <legend style="margin: auto;">
+                    <div style="border: 2px solid red; border-radius: 50%; height: 100px; width: 100px; " >
+                    <img src="Real/Images/robrecht_belien-.png" alt="" style="width: inherit;">
+                </div></legend>
+                <h5 style="text-align: center;">Robrecht Belien</h5>
+                <h6 style="text-align: center;">Elan Languages</h6>
+                <i style="text-align: center;">
+                    The best thing about WizIQ is that there are no hassles of
+                    downloads involved. Everything is simple and easy. I would
+                    definitely recommend WizIQ to other teachers and students.</i>
+            </fieldset>
+            <fieldset  class="slid">
+                <legend style="margin: auto;">
+                    <div style="border: 2px solid red; border-radius: 50%; height: 100px; width: 100px; " >
+    
+                    <img src="Real/Images/swati-majumdar.png" alt="" style="width: inherit;">
+                </div></legend>
+                <h5 style="text-align: center;">Swati Majumdar</h5>
+                <h6 style="text-align: center;">Director, Symbiosis Centre for Distance Learning</h6>
+                <i style="text-align: center;">
+                    The initiatives are an attempt towards bridging the distance'
+                    between the teachers and the taught. All that a student
+                    requires is a computer and an Internet connection to
+                    participate in the WizIQ virtual classroom and online chat
+                    sessions without any extra cost.</i>
+            </fieldset>
+            <fieldset  class="slid">
+                <legend style="margin: auto;">
+                    <div style="border: 2px solid red; border-radius: 50%; height: 100px; width: 100px; " >
+                    <img src="Real/Images/shailendra-singh.png" alt="" style="width: inherit;">
+                </div></legend>
+                <h5 style="text-align: center;">Shailendra Singh</h5>
+                <h6 style="text-align: center;">Regional Training Manager, Lakmé India Private Limited, India</h6>
+                <i style="text-align: center;">
+                    Lakmé has roped in 475 trainees for its training program
+                    using WizIQ learning delivery platform. WizIQ is a good
+                    learning platform and user friendly tool</i>
+            </fieldset>
+            <fieldset  class="slid">
+                <legend style="margin: auto;">
+                    <div style="border: 2px solid red; border-radius: 50%; height: 100px; width: 100px; " >
+                    <img src="Real/Images/dharmendra.png" alt="" style="width: inherit;">
+                </div></legend>
+                
+                <h5 style="text-align: center;">Dharmendra</h5>
+                <h6 style="text-align: center;">Max Skill First</h6>
+                <i style="text-align: center;"> 
+                    WizIQ provides great support and your people are really
+                    awesome and always ready to help; I think support adds a
+                    big value in any operations.</i>
+            </fieldset>
+            <button class= 'next' onclick="nextSlide()">&#10095</button>
+        
+        </div>
+
+    </div>
+
+    <script src="slider.js"></script>
+</body>
+</html>
